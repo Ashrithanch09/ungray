@@ -7,7 +7,8 @@ export default function CompnentFive() {
     const [compFiveData, setcompFiveData] = useState({})
 
     const component5Data = async() =>{
-    await axios.get("http://3.227.101.169:8020/api/v1/sample_assignment_api_5/",{
+    await axios.get("http://ec2-3-227-101-169.compute-1.amazonaws.com:8020/api/v1/sample_assignment_a
+pi_5/",{
       headers: {
             'accept': 'application/json',
             'Authorization': 'Basic dHJpYWw6YXNzaWdubWVudDEyMw=='
