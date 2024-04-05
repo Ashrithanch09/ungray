@@ -10,27 +10,25 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    console.log(formData)
-    axios
-      .post("http://3.227.101.169:8020/api/v1/login/",{
-  "username": formData.userName,
-  "email": "rushi@123gmail.com",
-  "password": formData.password,
-  "phone_number": "9393939099",
-  "input_code": 0
-})
-      .then((res) => {
-        console.log(res)
-        if (res.status === 200 && res.data.message === "Successfully Logged in") {
-          navigate("/dashboard")
-        }
-        else {
-          alert("Enter correct credentials")
-        }
-      })
-      .catch((err) => console.log(err));
-  };
-
+  console.log(formData);
+  axios
+    .post("http://3.227.101.169:8020/api/v1/login/", {
+      "username": "trial", 
+      "email": "ashunch@gmail.com", 
+      "password": "assignment123",
+      "phone_number": "9393939099",
+      "input_code": 0
+    })
+    .then((res) => {
+      console.log(res);
+      if (res.status === 200 && res.data.message === "Successfully Logged in") {
+        navigate("/dashboard");
+      } else {
+        alert("Enter correct credentials");
+      }
+    })
+    .catch((err) => console.log(err));
+};
   return (
     <div> 
     <div class="container" id="log">
